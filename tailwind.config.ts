@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
+  darkMode: 'class',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -9,34 +10,123 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // DUO Safety Orijinal Renk Paleti
+        // DUO Safety Core Brand Palette
         'duo-deep-blue': '#0f5f96',
         'duo-bright-blue': '#137dc5',
         'duo-navy': '#0a3c5f',
-        
-        // Tasarım Dokümanındaki Yüzey Renkleri
-        'surface': '#f9f9f9',
-        'surface-card': '#ffffff',
-        'surface-container': '#eeeeee',
-        'surface-container-low': '#f3f3f3',
-        'on-surface': '#1a1c1c',
-        'on-surface-variant': '#41474f',
-        
-        // Durum/Uyarı Renkleri
-        'error': '#ba1a1a',
+
+        // Precision Safety & Compliance Design System Tokens (Stitch)
+        'secondary': '#0f5f96',
+        'on-secondary': '#ffffff',
+        'secondary-container': '#5bb8fe',
+        'on-secondary-container': '#00476e',
+        'secondary-fixed': '#cce5ff',
+        'secondary-fixed-dim': '#93ccff',
+        'on-secondary-fixed': '#001d31',
+        'on-secondary-fixed-variant': '#004b73',
+
+        'primary': '#0b1c30',
+        'on-primary': '#ffffff',
+        'primary-container': '#131b2e',
+        'on-primary-container': '#7c839b',
+        'primary-fixed': '#dae2fd',
+        'primary-fixed-dim': '#bec6e0',
+        'on-primary-fixed': '#131b2e',
+        'on-primary-fixed-variant': '#3f465c',
+        'inverse-primary': '#93ccff',
+
+        'tertiary': '#000000',
+        'on-tertiary': '#ffffff',
+        'tertiary-container': '#2a1700',
+        'on-tertiary-container': '#b87500',
+        'tertiary-fixed': '#ffddb8',
+        'tertiary-fixed-dim': '#ffb95f',
+        'on-tertiary-fixed': '#2a1700',
+        'on-tertiary-fixed-variant': '#653e00',
+
+        // Surface & Canvas Tokens
+        'surface': '#f8f9ff',
+        'surface-dim': '#cbdbf5',
+        'surface-bright': '#f8f9ff',
+        'surface-canvas': '#F8FAFC',
+        'surface-card': '#FFFFFF',
+        'surface-container-lowest': '#ffffff',
+        'surface-container-low': '#eff4ff',
+        'surface-container': '#e5eeff',
+        'surface-container-high': '#dce9ff',
+        'surface-container-highest': '#d3e4fe',
+        'surface-variant': '#d3e4fe',
+        'surface-dark': '#0a2540',
+        'surface-tint': '#565e74',
+
+        'on-surface': '#0b1c30',
+        'on-surface-variant': '#45464d',
+        'on-background': '#0b1c30',
+        'background': '#f8f9ff',
+        'inverse-surface': '#213145',
+        'inverse-on-surface': '#eaf1ff',
+
+        'outline': '#76777d',
+        'outline-variant': '#c6c6cd',
+        'border-subtle': '#E2E8F0',
+
+        // Semantic / Status Colors
+        'accent-electric': '#137dc5',
         'compliance-green': '#10B981',
+        'alert-amber-soft': '#FEF3C7',
+        'error': '#ba1a1a',
+        'on-error': '#ffffff',
+        'error-container': '#ffdad6',
+        'on-error-container': '#93000a',
       },
       fontFamily: {
-        // Kurumsal tipografi (Next.js font optimizasyonu ile kullanılacak)
-        'display': ['var(--font-space-grotesk)', 'sans-serif'],
+        'display': ['var(--font-outfit)', 'var(--font-space-grotesk)', 'sans-serif'],
         'body': ['var(--font-inter)', 'sans-serif'],
+        'display-hero': ['var(--font-outfit)', 'sans-serif'],
+        'display-hero-mobile': ['var(--font-outfit)', 'sans-serif'],
+        'headline-xl': ['var(--font-outfit)', 'sans-serif'],
+        'headline-xl-mobile': ['var(--font-outfit)', 'sans-serif'],
+        'headline-lg': ['var(--font-outfit)', 'sans-serif'],
+        'headline-md': ['var(--font-outfit)', 'sans-serif'],
+        'headline-sm': ['var(--font-outfit)', 'sans-serif'],
+        'stat-counter': ['var(--font-outfit)', 'sans-serif'],
+        'body-lg': ['var(--font-inter)', 'sans-serif'],
+        'body-md': ['var(--font-inter)', 'sans-serif'],
+        'body-sm': ['var(--font-inter)', 'sans-serif'],
+        'label-md': ['var(--font-inter)', 'sans-serif'],
+        'label-sm': ['var(--font-inter)', 'sans-serif'],
+      },
+      fontSize: {
+        'display-hero': ['52px', { lineHeight: '60px', letterSpacing: '-0.025em', fontWeight: '700' }],
+        'display-hero-mobile': ['36px', { lineHeight: '44px', letterSpacing: '-0.02em', fontWeight: '700' }],
+        'headline-xl': ['38px', { lineHeight: '46px', letterSpacing: '-0.02em', fontWeight: '700' }],
+        'headline-xl-mobile': ['28px', { lineHeight: '36px', letterSpacing: '-0.015em', fontWeight: '700' }],
+        'headline-lg': ['28px', { lineHeight: '36px', letterSpacing: '-0.015em', fontWeight: '600' }],
+        'headline-md': ['21px', { lineHeight: '28px', letterSpacing: '-0.01em', fontWeight: '600' }],
+        'headline-sm': ['17px', { lineHeight: '24px', letterSpacing: '-0.005em', fontWeight: '600' }],
+        'stat-counter': ['42px', { lineHeight: '46px', letterSpacing: '-0.03em', fontWeight: '700' }],
+        'body-lg': ['18px', { lineHeight: '28px', fontWeight: '400' }],
+        'body-md': ['15px', { lineHeight: '24px', fontWeight: '400' }],
+        'body-sm': ['13px', { lineHeight: '20px', fontWeight: '400' }],
+        'label-md': ['14px', { lineHeight: '20px', letterSpacing: '0.01em', fontWeight: '600' }],
+        'label-sm': ['11px', { lineHeight: '16px', letterSpacing: '0.06em', fontWeight: '700' }],
       },
       spacing: {
         'gutter': '1.5rem',
+        'gutter-mobile': '1rem',
         'margin': '2rem',
-      }
+        'margin-mobile': '1rem',
+        'space-xs': '0.25rem',
+        'space-sm': '0.5rem',
+        'space-md': '1rem',
+        'space-lg': '1.5rem',
+        'space-xl': '2.5rem',
+        'space-2xl': '4rem',
+        'space-3xl': '6rem',
+      },
     },
   },
   plugins: [],
 }
+
 export default config
