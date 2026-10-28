@@ -39,11 +39,26 @@ export default function Header() {
               info@duosafety.co.uk
             </a>
           </div>
-          <div className="flex items-center gap-1.5">
-            <span className="material-symbols-outlined text-[14px] text-compliance-green">
-              verified
+          <div className="flex items-center gap-4">
+            <span className="flex items-center gap-1.5">
+              <span className="material-symbols-outlined text-[14px] text-compliance-green">
+                verified
+              </span>
+              <span>UK Principal Contractor &amp; CDM 2015 Specialists</span>
             </span>
-            <span>UK HSE &amp; CDM 2015 Statutory Specialists</span>
+            <span className="text-white/25">|</span>
+            <a
+              href="https://hse-test.yoldaki.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-secondary-fixed hover:text-white transition-colors font-bold"
+            >
+              <span className="w-2 h-2 rounded-full bg-compliance-green animate-pulse"></span>
+              <span>HSE Tracker Live Portal</span>
+              <span className="material-symbols-outlined text-[13px]">
+                open_in_new
+              </span>
+            </a>
           </div>
         </div>
       </div>
@@ -86,14 +101,28 @@ export default function Header() {
 
         {/* Action Button & Mobile Toggle */}
         <div className="flex items-center gap-3">
+          <a
+            href="https://hse-test.yoldaki.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 bg-duo-navy text-white font-label-md text-label-md rounded-lg hover:bg-duo-deep-blue transition-all shadow-sm hover:shadow-md border border-duo-bright-blue/30"
+            title="Launch Live HS Tracking System"
+          >
+            <span className="w-2 h-2 rounded-full bg-compliance-green animate-pulse"></span>
+            <span>HSE Tracker Login</span>
+            <span className="material-symbols-outlined text-[16px] text-secondary-fixed">
+              open_in_new
+            </span>
+          </a>
+
           <Link
             href="/contact"
-            className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-duo-deep-blue text-white font-label-md text-label-md rounded-lg hover:bg-duo-bright-blue transition-all shadow-sm hover:shadow-md"
+            className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-duo-deep-blue text-white font-label-md text-label-md rounded-lg hover:bg-duo-bright-blue transition-all shadow-sm hover:shadow-md"
           >
             <span className="material-symbols-outlined text-[18px]">
               shield_person
             </span>
-            <span>Client Portal</span>
+            <span>Get Advisory</span>
           </Link>
 
           <button
@@ -132,7 +161,20 @@ export default function Header() {
               </Link>
             )
           })}
-          <div className="pt-2 border-t border-surface-container">
+          <div className="pt-2 border-t border-surface-container space-y-2">
+            <a
+              href="https://hse-test.yoldaki.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 bg-duo-navy text-white font-label-md text-label-md rounded-lg shadow-sm"
+            >
+              <span className="w-2 h-2 rounded-full bg-compliance-green animate-pulse"></span>
+              <span>HSE Tracker Live Portal</span>
+              <span className="material-symbols-outlined text-[16px]">
+                open_in_new
+              </span>
+            </a>
             <Link
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
@@ -141,7 +183,7 @@ export default function Header() {
               <span className="material-symbols-outlined text-[18px]">
                 shield_person
               </span>
-              <span>Client Portal &amp; Dispatch</span>
+              <span>Request Advisory &amp; Dispatch</span>
             </Link>
           </div>
         </div>

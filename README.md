@@ -30,11 +30,11 @@ Authoritative digital presence for **DUO Safety Consultancy Ltd**, a UK-based Oc
 ## 📄 Site Structure (App Router)
 
 - **`/` (`app/page.tsx`) — Home:**
-  - Industrial Grid Hero Section + 3 Statutory Metric Cards (`100% Statutory HSE Adherence`, `CDM 2015 Principal Specialists`, `Site-Ready Comprehensive Audits`)
-  - Corporate Executive Overview
-  - 4 Core Practice Domains
-  - **HSE Web Tracker™ Platform** (9 Digital Governance Modules)
-  - Multi-Industry Safe Operations (Construction & Civil, Manufacturing, Chemical & Process, Automotive)
+  - Real Industrial Photography Hero Section + Principal Contractor Authority Card (`3.73M+ Man-Hours`, `5,208+ Inducted Operatives`, `100% Principal Contractor CDM 2015 SLA`)
+  - Corporate Executive Overview with Liverpool HQ Operations Imagery
+  - **Option A — Sticky Scrollytelling (`components/DynamicScrollyServices.tsx`):** Interactive scroll-driven 4-pillar showcase (`Principal Contractor & CDM 2015`, `Statutory Audits & LOLER/PUWER`, `Workforce Inductions & Competency Vault`, `Dynamic RAMS & Risk Engineering`) with cross-fading photography and live telemetry HUD
+  - **Option B — Interactive DUO HS Tracking System™ Cockpit (`components/HseTrackerShowcase.tsx`):** Live anonymized application simulation replicating `hse-test.yoldaki.com` (`Project & Man-Hours Tracker`, `12-Month Activity Heatmap`, `People & Competency Matrix`, `Dynamic RAMS & LOLER/PUWER`, `Offline-Ready Mobile Site Walk`) + direct portal login links
+  - Multi-Industry Safe Operations with Bespoke Sector Photography (Construction & Civil, Automotive BIW/Assembly, High-Throughput Manufacturing, Chemical & Process)
 - **`/about` (`app/about/page.tsx`) — About Us:**
   - Institutional Profile, Statutory Dutyholder Overview, Mission & Core Philosophy (`Zero Harm Benchmark`, `Statutory Absolute`, `Live Operational Reality`), Key Expertise Areas, and Why Choose DUO Safety.
 - **`/services` (`app/services/page.tsx`) — Services Portfolio:**
@@ -67,3 +67,19 @@ git add .
 git commit -m "Update DUO Safety web platform"
 git push
 ```
+
+---
+
+## 📋 Changelog & Development Log
+
+### `2026-10-28` — Dynamic Scrollytelling, Live HSE Tracker Cockpit & Bespoke UK Sector Photography
+- **Bespoke Industrial & Corporate Photography (`public/images/`):**
+  - Generated and integrated 6 photorealistic UK HSE & Principal Contractor visual assets (`hero-construction-safety.jpg`, `sector-construction.jpg`, `sector-automotive.jpg`, `sector-manufacturing.jpg`, `sector-chemical.jpg`, `about-liverpool-hq.jpg`) across Home, About, and Location pages.
+- **Principal Contractor & CDM 2015 Positioning:**
+  - Elevated **Appointed Principal Contractor** duties across the Hero section, Services portfolio (`DUO-CDM-01`), Corporate Overview, and global header/footer navigation.
+- **Option A — Sticky Scrollytelling Architecture (`components/DynamicScrollyServices.tsx`):**
+  - Built an IntersectionObserver-driven two-column interactive stage where scrolling through the 4 core practice pillars dynamically cross-fades the sticky visual stage and updates live statutory telemetry indicators.
+- **Option B — Interactive DUO HS Tracking System™ Showcase (`components/HseTrackerShowcase.tsx`):**
+  - Engineered a rich, privacy-safe (100% anonymized) interactive application cockpit modeled after `https://hse-test.yoldaki.com` featuring live KPI tiles (`5,208 Inducted People`, `108 Active RAMS`, `219 Plant & MEWPs`, `3.73M+ Man-Hours`), a 12-month inspection heatmap, CSCS/Competency card vault table, RAMS register, and Mobile Site Walk observation cards.
+- **Direct Portal Integration:**
+  - Added direct external launch links to `https://hse-test.yoldaki.com` in `components/Header.tsx` (top bar, desktop navbar, and mobile drawer), `components/Footer.tsx`, and the Home page.

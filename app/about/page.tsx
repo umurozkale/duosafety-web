@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -140,42 +141,35 @@ export default function AboutPage() {
             </div>
 
             <div className="lg:col-span-6 relative">
-              <div className="relative rounded-xl overflow-hidden shadow-xl bg-gradient-to-br from-duo-navy via-duo-deep-blue to-duo-bright-blue h-[440px] flex flex-col justify-between p-space-xl text-white">
-                <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px]"></div>
+              <div className="relative rounded-xl overflow-hidden shadow-xl bg-duo-navy h-[440px] flex flex-col justify-between p-space-xl text-white">
+                <Image
+                  src="/images/about-liverpool-hq.jpg"
+                  alt="DUO Safety Liverpool Operations Centre and Principal Contractor Advisory Team"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-duo-navy via-duo-navy/55 to-duo-navy/35"></div>
                 <div className="relative z-10 flex items-center justify-between">
-                  <span className="px-3 py-1 rounded-full bg-white/15 backdrop-blur-md font-label-sm text-label-sm uppercase tracking-wider">
-                    CDM 2015 &amp; HSE Act 1974
+                  <span className="px-3 py-1 rounded-full bg-duo-navy/80 backdrop-blur-md font-label-sm text-label-sm uppercase tracking-wider border border-white/15">
+                    Principal Contractor • CDM 2015
                   </span>
-                  <span className="material-symbols-outlined text-[40px] text-secondary-fixed/60">
+                  <span className="material-symbols-outlined text-[36px] text-compliance-green">
                     verified_user
                   </span>
                 </div>
 
-                <div className="relative z-10 my-auto flex flex-col items-center text-center space-y-3">
-                  <div className="w-20 h-20 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center">
-                    <span className="material-symbols-outlined text-[48px] text-secondary-fixed">
-                      engineering
-                    </span>
-                  </div>
-                  <div className="font-headline-lg text-headline-lg text-white">
-                    Statutory Dutyholder Representation
-                  </div>
-                  <p className="font-body-sm text-body-sm text-secondary-fixed/85 max-w-md">
-                    Protecting Clients, Principal Designers, and Principal Contractors from regulatory breaches across all RIBA &amp; construction stages.
-                  </p>
-                </div>
-
-                <div className="relative z-10 bg-duo-navy/80 backdrop-blur-md rounded-xl p-space-md border border-white/15">
+                <div className="relative z-10 bg-duo-navy/85 backdrop-blur-md rounded-xl p-space-md border border-white/15">
                   <div className="flex items-center gap-space-sm mb-1">
                     <span className="material-symbols-outlined text-compliance-green text-[20px]">
                       verified
                     </span>
                     <span className="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed">
-                      Site Directive Analysis
+                      Liverpool HQ &amp; Nationwide Site Command
                     </span>
                   </div>
                   <p className="font-headline-sm text-headline-sm font-semibold text-white">
-                    CDM 2015 Technical Execution on Active Civil &amp; Commercial Works
+                    Appointed Principal Contractor &amp; CDM 2015 Dutyholder Representation Across Flagship UK Works
                   </p>
                 </div>
               </div>

@@ -72,6 +72,20 @@ export default function Footer() {
                   Contact &amp; Dispatch
                 </Link>
               </li>
+              <li className="pt-1">
+                <a
+                  href="https://hse-test.yoldaki.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-compliance-green hover:text-white font-semibold transition-colors"
+                >
+                  <span className="w-2 h-2 rounded-full bg-compliance-green animate-pulse"></span>
+                  <span>HS Tracking System Login</span>
+                  <span className="material-symbols-outlined text-[14px]">
+                    open_in_new
+                  </span>
+                </a>
+              </li>
             </ul>
           </div>
 

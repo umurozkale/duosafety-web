@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, FormEvent } from 'react'
+import Image from 'next/image'
 
 export default function LocationPage() {
   const [submitted, setSubmitted] = useState(false)
@@ -163,34 +164,29 @@ export default function LocationPage() {
 
           {/* Right Architectural Facility Card */}
           <div className="lg:col-span-5 flex flex-col gap-space-md">
-            <div className="relative h-full min-h-[320px] rounded-xl overflow-hidden shadow-md bg-gradient-to-br from-duo-navy via-duo-deep-blue to-duo-bright-blue p-space-xl flex flex-col justify-between text-white">
-              <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px]"></div>
+            <div className="relative h-full min-h-[340px] rounded-xl overflow-hidden shadow-md bg-duo-navy p-space-xl flex flex-col justify-between text-white">
+              <Image
+                src="/images/about-liverpool-hq.jpg"
+                alt="DUO Safety Boundary Street Liverpool Facility"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 45vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-duo-navy via-duo-navy/55 to-duo-navy/30"></div>
               <div className="relative z-10 flex items-center justify-between">
                 <span className="px-3 py-1 rounded bg-duo-bright-blue text-white font-label-sm text-label-sm font-bold uppercase tracking-wider">
                   Merseyside Operations
                 </span>
-                <span className="material-symbols-outlined text-[36px] text-secondary-fixed/80">
+                <span className="material-symbols-outlined text-[32px] text-compliance-green">
                   location_city
                 </span>
               </div>
 
-              <div className="relative z-10 my-auto py-6 flex flex-col items-center text-center space-y-2">
-                <span className="material-symbols-outlined text-[64px] text-secondary-fixed">
-                  pin_drop
-                </span>
-                <div className="font-headline-md text-headline-md text-white">
-                  105 Boundary Street, L5 9YJ
-                </div>
-                <div className="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-widest">
-                  Vauxhall / Kirkdale Corridor • Liverpool
-                </div>
-              </div>
-
-              <div className="relative z-10 bg-duo-navy/80 backdrop-blur-md p-space-md rounded-lg border border-white/15">
+              <div className="relative z-10 bg-duo-navy/85 backdrop-blur-md p-space-md rounded-lg border border-white/15">
                 <p className="font-headline-sm text-headline-sm text-white">
-                  Boundary Street Advisory Facility
+                  105 Boundary Street Advisory Facility (L5 9YJ)
                 </p>
-                <p className="font-body-sm text-body-sm text-secondary-fixed/80 mt-1">
+                <p className="font-body-sm text-body-sm text-secondary-fixed/85 mt-1">
                   Strategic corridor access to Atlantic Gateway, Mersey Docks, and North West motorway networks (M62 / M57 / M58).
                 </p>
               </div>
